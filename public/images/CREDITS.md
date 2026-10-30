@@ -1,0 +1,1 @@
+- hero-group.jpg — AI-generated (Google Stitch, Gemini), prompt: "small group of five adults of varied ages in a synchronized Reformer Pilates class, warm minimal boutique studio, soft daylight, editorial 35mm"

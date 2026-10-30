@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #faf7f2;
+  --color-sand-100: #f3ede4;
+  --color-sand-200: #e8dfd3;
+  --color-sand-300: #d9ccbb;
+  --color-ink: #2b2622;
+  --color-muted: #665c52;
+  --color-clay: #9a5238;
+  --color-clay-dark: #7c4029;
+  --color-sage: #6f7d66;
+  --color-sage-light: #e3e8dc;
+
+  --font-sans: var(--font-heebo), system-ui, sans-serif;
+  --font-serif: var(--font-frank-ruhl), Georgia, serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --focus-ring: var(--color-clay);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-padding-top: 5.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Dark surfaces switch the focus ring to a light color to keep it visible. */
+.surface-dark {
+  --focus-ring: var(--color-cream);
+}
+
+/* Hide the default disclosure marker on <summary> elements styled as buttons. */
+summary::-webkit-details-marker {
+  display: none;
 }

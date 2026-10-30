@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "image": "node --env-file-if-exists=.env.local scripts/generate-image.mjs"
   },
   "dependencies": {
+    "lucide-react": "^1.64.0",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0"
